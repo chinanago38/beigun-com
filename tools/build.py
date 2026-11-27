@@ -264,7 +264,7 @@ def top_hero(body):
     credit = (f'<p class="credit">写真：{esc(ph[6])} {esc(ph[3])} / <a href="{esc(ph[5])}" rel="noopener license" target="_blank">{esc(ph[4])}</a>'
               f'（<a href="{esc(ph[2])}" rel="noopener" target="_blank">Wikimedia Commons</a>）</p>') if ph else ""
     return (f'<section class="tophero"{bg}><div class="inner"><p class="kicker">在日米軍基地のイベントと米軍の公式情報</p>'
-            f'<h1>米軍基地の一般開放、<br>次はいつ・どこで？</h1><p class="lead">岩国フレンドシップデー、横田の日米友好祭、三沢基地航空祭など、在日米軍基地のイベントを公式発表からまとめています。個人運営の非公式サイトです。</p>'
+            f'<h1>米軍基地の一般開放、<br>次はいつ・どこで？</h1><p class="lead">岩国フレンドシップデー、横田の日米友好祭、三沢基地航空祭など、在日米軍基地のイベントを公式発表からまとめています。</p>'
             f'<div class="cta"><a class="btn" href="/event/">基地イベント一覧</a><a class="btn ghost" href="/event/iwakuni/">岩国フレンドシップデー</a></div></div>{credit}</section>\n')
 
 SHIP_JA = {"CVN 68": "ニミッツ", "CVN 69": "ドワイト・D・アイゼンハワー", "CVN 70": "カール・ヴィンソン", "CVN 71": "セオドア・ルーズベルト",
@@ -465,7 +465,7 @@ def render(url, title, desc, body):
 {main}</div></main>
 
 <footer class="site"><div class="wrap">
-  <p>米軍.com は、在日米軍基地のイベントや米軍の公式発表を日本語でまとめた個人運営の情報サイトです。米軍・米国政府・防衛省の公式サイトではありません。</p>
+  <p>米軍.com は、在日米軍基地のイベントや米軍の公式発表を日本語でまとめた情報サイトです。米軍・米国政府・防衛省とは関係のない、ちんあなご編集部のサイトです。</p>
   <p>{" ・ ".join(f'<a href="{u}">{t}</a>' for t, u in [("トップ", "/")] + NAV)}</p>
   <p><a href="/operator/">運営者情報</a> ・ <a href="/editorial-policy/">編集方針</a> ・ <a href="/contact/">お問い合わせ</a> ・ <a href="/privacy/">プライバシーポリシー</a> ・ <a href="/disclaimer/">免責事項</a></p>
   <p>© 2026 米軍.com</p>
