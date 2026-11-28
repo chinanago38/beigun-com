@@ -6,7 +6,7 @@ import glob, html, os, re, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://xn--v5zv98a.com"
-CSS_VER = "20261129j"
+CSS_VER = "20261129k"
 AD = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061443138303693" crossorigin="anonymous"></script>'
 NAV = [("基地イベント", "/event/"), ("岩国フレンドシップデー", "/event/iwakuni/")]
 SECTION_NAME = {"event": ("基地イベント", "/event/")}

@@ -346,5 +346,5 @@ ul.dots li::before{content:"";position:absolute;left:4px;top:17px;width:9px;heig
 /* フッターの右端のちんあなごマーク（2026-11-29） */
 footer.site .foot{display:flex;align-items:flex-end;gap:16px}
 footer.site .ft{flex:1;min-width:0}
-footer.site .mark{flex:none;width:80px;height:80px;display:block}
+footer.site .mark{flex:none;width:80px;height:80px;display:block;filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff)}
 @media(max-width:640px){footer.site .mark{width:64px;height:64px}}
