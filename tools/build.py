@@ -6,7 +6,7 @@ import glob, html, os, re, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://xn--v5zv98a.com"
-CSS_VER = "20261129i"
+CSS_VER = "20261129j"
 AD = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061443138303693" crossorigin="anonymous"></script>'
 NAV = [("基地イベント", "/event/"), ("岩国フレンドシップデー", "/event/iwakuni/")]
 SECTION_NAME = {"event": ("基地イベント", "/event/")}
@@ -514,12 +514,12 @@ def render(url, title, desc, body):
 <main><div class="wrap">
 {main}</div></main>
 
-<footer class="site"><div class="wrap">
+<footer class="site"><div class="wrap foot"><div class="ft">
   <p>米軍.com は、在日米軍基地のイベントや米軍の公式発表を日本語でまとめた情報サイトです。米軍・米国政府・防衛省とは関係のない、ちんあなご編集部のサイトです。</p>
   <p>{" ・ ".join(f'<a href="{u}">{t}</a>' for t, u in [("トップ", "/")] + NAV)}</p>
   <p><a href="/operator/">運営者情報</a> ・ <a href="/editorial-policy/">編集方針</a> ・ <a href="/contact/">お問い合わせ</a> ・ <a href="/privacy/">プライバシーポリシー</a> ・ <a href="/disclaimer/">免責事項</a></p>
   <p>© 2026 米軍.com</p>
-</div></footer>
+</div><img class="mark" src="/assets/chinanago-mark.webp" width="80" height="80" alt="ちんあなご編集部のマーク" loading="lazy" decoding="async"></div></footer>
 </body>
 </html>
 """

@@ -343,3 +343,8 @@ ul.dots li::before{content:"";position:absolute;left:4px;top:17px;width:9px;heig
 .photo-row .photo.inpage img{aspect-ratio:4/3}
 .gallery.g-inpage figure.photo{margin:0}
 .gallery.g-inpage img{aspect-ratio:4/3}
+/* フッターの右端のちんあなごマーク（2026-11-29） */
+footer.site .foot{display:flex;align-items:flex-end;gap:16px}
+footer.site .ft{flex:1;min-width:0}
+footer.site .mark{flex:none;width:80px;height:80px;display:block}
+@media(max-width:640px){footer.site .mark{width:64px;height:64px}}
