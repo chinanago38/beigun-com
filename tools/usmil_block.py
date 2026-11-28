@@ -126,4 +126,4 @@ def usmil_block():
             f'{none}<div class="um-grid">{"".join(cards)}</div>'
             f'<p class="note">NOTAM は操縦する人向けの空域の知らせで、訓練の中身や部隊名までは書かれていないことがあります（「使う部隊の記載なし」は、岩国の臨時留保空域・W で始まる警戒区域・米軍の飛行場の NOTAM で、部隊名が書かれていないもの）。'
             f'地図の赤い丸は NOTAM の Q項の中心と半径で、実際の区域はその中の多角形などです。押すと Google マップが開きます。'
-            f'航空機の運航には使えません。原文と全国の NOTAM は <a href="https://notam.tokyo/" target="_blank" rel="noopener">notam.tokyo</a> で見られます。</p>{js}</section>\n')
+            f'航空機の運航には使えません。米軍の NOTAM の一覧と原文は <a href="https://notam.tokyo/us-military/" target="_blank" rel="noopener">notam.tokyo の米軍の演習・訓練のページ</a>で見られます。</p>{js}</section>\n')

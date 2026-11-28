@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-28T08:40:34.515Z",
+ "fetched_at": "2026-11-28T09:40:33.335Z",
  "source": "国土交通省 SWIM デジタルノータムリクエストサービス（サービス番号 S2019）",
  "via": "notam.tokyo（ちんあなご編集部）の取り込み結果",
  "count": 60,
@@ -29,7 +29,7 @@
    "e_head": "WARNING AREA W-181(GOLF GOLF) ACT",
    "cluster": "沖縄の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5439-26"
+   "url": "https://notam.tokyo/us-military/#n-P5439-26"
   },
   {
    "id": "P5799/26",
@@ -56,7 +56,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "LION-WEST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5799-26"
+   "url": "https://notam.tokyo/us-military/#n-P5799-26"
   },
   {
    "id": "P5800/26",
@@ -83,7 +83,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "LION-CENTER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5800-26"
+   "url": "https://notam.tokyo/us-military/#n-P5800-26"
   },
   {
    "id": "P5804/26",
@@ -110,7 +110,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EDIX-TIGER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5804-26"
+   "url": "https://notam.tokyo/us-military/#n-P5804-26"
   },
   {
    "id": "P5805/26",
@@ -137,7 +137,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EDIX-LION",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5805-26"
+   "url": "https://notam.tokyo/us-military/#n-P5805-26"
   },
   {
    "id": "P5806/26",
@@ -164,7 +164,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EDIX-MOOSE",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5806-26"
+   "url": "https://notam.tokyo/us-military/#n-P5806-26"
   },
   {
    "id": "P5807/26",
@@ -191,7 +191,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "MOOSE-NORTH",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5807-26"
+   "url": "https://notam.tokyo/us-military/#n-P5807-26"
   },
   {
    "id": "P5809/26",
@@ -218,7 +218,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "MOOSE-SOUTH-HI",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5809-26"
+   "url": "https://notam.tokyo/us-military/#n-P5809-26"
   },
   {
    "id": "P5810/26",
@@ -245,7 +245,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "MOOSE-SOUTH-LO",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5810-26"
+   "url": "https://notam.tokyo/us-military/#n-P5810-26"
   },
   {
    "id": "P5811/26",
@@ -272,7 +272,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TYBEE-WEST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5811-26"
+   "url": "https://notam.tokyo/us-military/#n-P5811-26"
   },
   {
    "id": "P5812/26",
@@ -299,7 +299,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TYBEE-EAST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5812-26"
+   "url": "https://notam.tokyo/us-military/#n-P5812-26"
   },
   {
    "id": "P5815/26",
@@ -326,7 +326,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "IDAMAS",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5815-26"
+   "url": "https://notam.tokyo/us-military/#n-P5815-26"
   },
   {
    "id": "P5796/26",
@@ -353,7 +353,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EAGLE-CENTER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5796-26"
+   "url": "https://notam.tokyo/us-military/#n-P5796-26"
   },
   {
    "id": "P5797/26",
@@ -380,7 +380,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EAGLE-EAST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5797-26"
+   "url": "https://notam.tokyo/us-military/#n-P5797-26"
   },
   {
    "id": "P5801/26",
@@ -407,7 +407,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TIGER-WEST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5801-26"
+   "url": "https://notam.tokyo/us-military/#n-P5801-26"
   },
   {
    "id": "P5802/26",
@@ -434,7 +434,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TIGER-CENTER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5802-26"
+   "url": "https://notam.tokyo/us-military/#n-P5802-26"
   },
   {
    "id": "P5803/26",
@@ -461,7 +461,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TIGER-EAST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5803-26"
+   "url": "https://notam.tokyo/us-military/#n-P5803-26"
   },
   {
    "id": "P5937/26",
@@ -488,7 +488,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "日本から遠い海上",
    "mission": "ADNAP",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5937-26"
+   "url": "https://notam.tokyo/us-military/#n-P5937-26"
   },
   {
    "id": "P5944/26",
@@ -515,7 +515,7 @@
    "e_head": "IWAKUNI TEMPO RESERVED AIRSPACE ACT AS FLW",
    "cluster": "岩国（山口県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5944-26"
+   "url": "https://notam.tokyo/us-military/#n-P5944-26"
   },
   {
    "id": "P5859/26",
@@ -542,7 +542,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "LION-WEST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5859-26"
+   "url": "https://notam.tokyo/us-military/#n-P5859-26"
   },
   {
    "id": "P5860/26",
@@ -569,7 +569,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "LION-CENTER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5860-26"
+   "url": "https://notam.tokyo/us-military/#n-P5860-26"
   },
   {
    "id": "P5864/26",
@@ -596,7 +596,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EDIX-TIGER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5864-26"
+   "url": "https://notam.tokyo/us-military/#n-P5864-26"
   },
   {
    "id": "P5865/26",
@@ -623,7 +623,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EDIX-LION",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5865-26"
+   "url": "https://notam.tokyo/us-military/#n-P5865-26"
   },
   {
    "id": "P5866/26",
@@ -650,7 +650,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EDIX-MOOSE",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5866-26"
+   "url": "https://notam.tokyo/us-military/#n-P5866-26"
   },
   {
    "id": "P5867/26",
@@ -677,7 +677,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "MOOSE-NORTH",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5867-26"
+   "url": "https://notam.tokyo/us-military/#n-P5867-26"
   },
   {
    "id": "P5868/26",
@@ -704,7 +704,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "MOOSE-SOUTH-HI",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5868-26"
+   "url": "https://notam.tokyo/us-military/#n-P5868-26"
   },
   {
    "id": "P5869/26",
@@ -731,7 +731,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "MOOSE-SOUTH-LO",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5869-26"
+   "url": "https://notam.tokyo/us-military/#n-P5869-26"
   },
   {
    "id": "P5870/26",
@@ -758,7 +758,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TYBEE-WEST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5870-26"
+   "url": "https://notam.tokyo/us-military/#n-P5870-26"
   },
   {
    "id": "P5871/26",
@@ -785,7 +785,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TYBEE-EAST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5871-26"
+   "url": "https://notam.tokyo/us-military/#n-P5871-26"
   },
   {
    "id": "P5874/26",
@@ -812,7 +812,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "IDAMAS",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5874-26"
+   "url": "https://notam.tokyo/us-military/#n-P5874-26"
   },
   {
    "id": "P6019/26",
@@ -839,7 +839,7 @@
    "e_head": "IWAKUNI TEMPO RESERVED AIRSPACE ACT AS FLW",
    "cluster": "岩国（山口県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P6019-26"
+   "url": "https://notam.tokyo/us-military/#n-P6019-26"
   },
   {
    "id": "P5872/26",
@@ -866,7 +866,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "BROWNS-NORTH",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5872-26"
+   "url": "https://notam.tokyo/us-military/#n-P5872-26"
   },
   {
    "id": "P5873/26",
@@ -893,7 +893,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "BROWNS-SOUTH",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5873-26"
+   "url": "https://notam.tokyo/us-military/#n-P5873-26"
   },
   {
    "id": "P5857/26",
@@ -920,7 +920,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EAGLE-CENTER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5857-26"
+   "url": "https://notam.tokyo/us-military/#n-P5857-26"
   },
   {
    "id": "P5858/26",
@@ -947,7 +947,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "EAGLE-EAST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5858-26"
+   "url": "https://notam.tokyo/us-military/#n-P5858-26"
   },
   {
    "id": "P5861/26",
@@ -974,7 +974,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TIGER-WEST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5861-26"
+   "url": "https://notam.tokyo/us-military/#n-P5861-26"
   },
   {
    "id": "P5862/26",
@@ -1001,7 +1001,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TIGER-CENTER",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5862-26"
+   "url": "https://notam.tokyo/us-military/#n-P5862-26"
   },
   {
    "id": "P5863/26",
@@ -1028,7 +1028,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "沖縄の周辺",
    "mission": "TIGER-EAST",
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5863-26"
+   "url": "https://notam.tokyo/us-military/#n-P5863-26"
   },
   {
    "id": "P5955/26",
@@ -1055,7 +1055,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5955-26"
+   "url": "https://notam.tokyo/us-military/#n-P5955-26"
   },
   {
    "id": "P5956/26",
@@ -1082,7 +1082,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5956-26"
+   "url": "https://notam.tokyo/us-military/#n-P5956-26"
   },
   {
    "id": "P5957/26",
@@ -1109,7 +1109,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5957-26"
+   "url": "https://notam.tokyo/us-military/#n-P5957-26"
   },
   {
    "id": "P5958/26",
@@ -1136,7 +1136,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5958-26"
+   "url": "https://notam.tokyo/us-military/#n-P5958-26"
   },
   {
    "id": "P6025/26",
@@ -1163,7 +1163,7 @@
    "e_head": "WARNING AREA W-181(GOLF GOLF) ACT",
    "cluster": "沖縄の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P6025-26"
+   "url": "https://notam.tokyo/us-military/#n-P6025-26"
   },
   {
    "id": "P6020/26",
@@ -1190,7 +1190,7 @@
    "e_head": "IWAKUNI TEMPO RESERVED AIRSPACE ACT AS FLW",
    "cluster": "岩国（山口県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P6020-26"
+   "url": "https://notam.tokyo/us-military/#n-P6020-26"
   },
   {
    "id": "P5959/26",
@@ -1217,7 +1217,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5959-26"
+   "url": "https://notam.tokyo/us-military/#n-P5959-26"
   },
   {
    "id": "P5960/26",
@@ -1244,7 +1244,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5960-26"
+   "url": "https://notam.tokyo/us-military/#n-P5960-26"
   },
   {
    "id": "P5961/26",
@@ -1271,7 +1271,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5961-26"
+   "url": "https://notam.tokyo/us-military/#n-P5961-26"
   },
   {
    "id": "P5962/26",
@@ -1298,7 +1298,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5962-26"
+   "url": "https://notam.tokyo/us-military/#n-P5962-26"
   },
   {
    "id": "P5983/26",
@@ -1325,7 +1325,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5983-26"
+   "url": "https://notam.tokyo/us-military/#n-P5983-26"
   },
   {
    "id": "P5984/26",
@@ -1352,7 +1352,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5984-26"
+   "url": "https://notam.tokyo/us-military/#n-P5984-26"
   },
   {
    "id": "P5985/26",
@@ -1379,7 +1379,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5985-26"
+   "url": "https://notam.tokyo/us-military/#n-P5985-26"
   },
   {
    "id": "P5986/26",
@@ -1406,7 +1406,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5986-26"
+   "url": "https://notam.tokyo/us-military/#n-P5986-26"
   },
   {
    "id": "P5969/26",
@@ -1433,7 +1433,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5969-26"
+   "url": "https://notam.tokyo/us-military/#n-P5969-26"
   },
   {
    "id": "P5970/26",
@@ -1460,7 +1460,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5970-26"
+   "url": "https://notam.tokyo/us-military/#n-P5970-26"
   },
   {
    "id": "P5971/26",
@@ -1487,7 +1487,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5971-26"
+   "url": "https://notam.tokyo/us-military/#n-P5971-26"
   },
   {
    "id": "P5972/26",
@@ -1514,7 +1514,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5972-26"
+   "url": "https://notam.tokyo/us-military/#n-P5972-26"
   },
   {
    "id": "P5973/26",
@@ -1541,7 +1541,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5973-26"
+   "url": "https://notam.tokyo/us-military/#n-P5973-26"
   },
   {
    "id": "P5974/26",
@@ -1568,7 +1568,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5974-26"
+   "url": "https://notam.tokyo/us-military/#n-P5974-26"
   },
   {
    "id": "P5975/26",
@@ -1595,7 +1595,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5975-26"
+   "url": "https://notam.tokyo/us-military/#n-P5975-26"
   },
   {
    "id": "P5976/26",
@@ -1622,7 +1622,7 @@
    "e_head": "MULTIPLE U.S. MIL ACT WILL BE CONDUCTED WI FUKUOKA FIR AS FLW",
    "cluster": "三沢（青森県）の周辺",
    "mission": null,
-   "url": "https://notam.tokyo/kuko/rjjj/#n-P5976-26"
+   "url": "https://notam.tokyo/us-military/#n-P5976-26"
   }
  ]
 }

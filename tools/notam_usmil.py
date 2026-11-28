@@ -159,6 +159,11 @@ def main():
     a = ap.parse_args()
     src = json.load(open(a.src, encoding="utf-8"))
     now = datetime.datetime.fromisoformat(a.now.replace("Z", "+00:00")) if a.now else datetime.datetime.now(datetime.timezone.utc)
+    # notam.tokyo の米軍の面（/us-military/）に載っている NOTAM はそこへ、無いものは空港ごとの面へリンクする（11/28 notam.tokyo の席が作った）
+    um = {}
+    up = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(a.src))), "site", "data", "usmil.json")
+    if os.path.exists(up):
+        um = {i["id"]: i["url"] for i in json.load(open(up, encoding="utf-8")).get("items", []) if i.get("url")}
     rows = []
     for it in src.get("items", []):
         raw, loc = it.get("r", ""), it.get("l", "")
@@ -183,7 +188,7 @@ def main():
             "lower": p["lower"], "upper": p["upper"], "place": place, "pos": pos,
             "e_head": p["e_head"], "cluster": cluster_of(p["lat"], p["lon"]),
             "mission": (re.search(r"MISSION NAME\s*:?\s*([A-Z0-9][A-Z0-9 \-]*[A-Z0-9])", raw) or [None, None])[1],
-            "url": f"https://notam.tokyo/kuko/{loc.lower()}/#n-{p['id'].replace('/', '-')}",
+            "url": um.get(p["id"]) or f"https://notam.tokyo/kuko/{loc.lower()}/#n-{p['id'].replace('/', '-')}",
         })
     rows.sort(key=lambda r: (r["start_utc"], r["id"]))
     out = {"fetched_at": src.get("fetched_at"), "source": src.get("source"),
