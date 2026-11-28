@@ -6,7 +6,7 @@ import glob, html, os, re, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://xn--v5zv98a.com"
-CSS_VER = "20261129g"
+CSS_VER = "20261129h"
 AD = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061443138303693" crossorigin="anonymous"></script>'
 NAV = [("基地イベント", "/event/"), ("岩国フレンドシップデー", "/event/iwakuni/")]
 SECTION_NAME = {"event": ("基地イベント", "/event/")}
@@ -214,6 +214,7 @@ def figure_for(url):
 
 GALLERY = None
 GAL_ASSIGNED = None
+GAL_ALT = {}
 def assign_galleries():
     # サイト全体で同じ写真が2回出ないよう、個別ページ→一覧ページの順に写真を割り当てる
     global GAL_ASSIGNED
@@ -248,11 +249,26 @@ def gallery_for(url, hero_src):
             for l in open(p, encoding="utf-8").read().splitlines()[1:]:
                 r = l.split("\t")
                 if len(r) >= 7 and r[5]: GALLERY.setdefault(r[0], []).append(r)
+        okp = os.path.join(ROOT, "tools", "photos", "gallery_ok.tsv")
+        if os.path.exists(okp):  # 2026-11-29 機体・艦・基地が主役の写真だけ（人が主役の写真は出さない）
+            ok = dict(l.split("\t", 1) for l in open(okp, encoding="utf-8").read().splitlines()[1:] if "\t" in l)
+            for k in GALLERY:
+                GALLERY[k] = [r[:1] + [ok[r[2].split("?")[0]], r[2].split("?")[0]] + r[3:] for r in GALLERY[k] if r[2].split("?")[0] in ok]
+            GAL_ALT.update(ok)
     if hero_src is None and url == "": return ""
     if GAL_ASSIGNED is None:
         photo_for("/"); assign_galleries()
     items = GAL_ASSIGNED.get(url, [])
     if len(items) < 2: return ""
+    if GAL_ALT:
+        from design import ic
+        figs = "".join(
+            f'<figure><a href="{esc(r[3])}" target="_blank" rel="noopener"><img src="{esc(r[2])}" alt="{esc(r[1])}" loading="lazy" decoding="async"></a>'
+            f'<figcaption>{esc(r[1])}<br>写真：{esc(r[4][:60])}／Wikimedia Commons（'
+            f'{"<a href=" + chr(34) + esc(r[6]) + chr(34) + " target=_blank rel=" + chr(34) + "noopener license" + chr(34) + ">" + esc(r[5]) + "</a>" if r[6] else esc(r[5])}）</figcaption></figure>'
+            for r in items[:12])
+        return (f'<section class="block"><h2>{ic("camera")}写真ギャラリー</h2><div class="gallery">{figs}</div>'
+                f'<p class="note">写真はWikimedia Commonsの自由ライセンス画像です。クリックすると撮影者・ライセンスの詳細ページが開きます。</p></section>\n')
     figs = "".join(
         f'<figure><a href="{esc(r[3])}" target="_blank" rel="noopener"><img src="{esc(r[2])}" alt="{esc((r[1] + "見た" if r[1] else "") + "写真")}" loading="lazy" decoding="async"></a>'
         f'<figcaption>{"<b>" + esc(r[1]) + "</b> " if r[1] else ""}{esc(r[4][:60])} / '
@@ -467,6 +483,10 @@ def render(url, title, desc, body):
     if gal:
         j = main.find('<section class="sources block">')
         main = main[:j] + gal + main[j:] if j >= 0 else main + gal
+    lm = os.path.join(ROOT, "tools", "photos", "local.json")
+    if os.path.exists(lm):  # 写真は手元の webp（幅1200px以下）を出す（tools/photos_local.py）
+        import json as _j
+        for src, loc in _j.load(open(lm, encoding="utf-8")).items(): main = main.replace(src, loc)
     nav = "".join(f'<a href="{u}">{t}</a>' for t, u in NAV if os.path.exists(os.path.join(ROOT, u.strip("/"), "index.html")) )
     return f"""<!DOCTYPE html>
 <html lang="ja">

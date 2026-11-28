@@ -160,7 +160,7 @@ def photo_fig(c):
     e = lambda s: html.escape(s, quote=True)
     lh = f'<a href="{e(lic_url)}" rel="noopener license" target="_blank">{e(lic)}</a>' if lic_url.startswith("http") else e(lic)
     return (f'<figure class="photo inpage"><img src="{e(src)}" alt="{e(alt)}" loading="lazy" decoding="async">'
-            f'<figcaption>{e(alt)}　写真：{e(author)} / {lh}（<a href="{e(page)}" rel="noopener" target="_blank">Wikimedia Commons</a>）</figcaption></figure>')
+            f'<figcaption>{e(alt)}<br>写真：{e(author)}／<a href="{e(page)}" rel="noopener" target="_blank">Wikimedia Commons</a>（{lh}）</figcaption></figure>')
 
 
 def decorate(url, main):
@@ -179,4 +179,9 @@ def decorate(url, main):
         for key, c in photos.items():  # 見出し（h2・h3）の直後に写真
             sec = re.sub(r"(<h[23]>(?:(?!</h[23]>).)*?" + re.escape(key) + r"(?:(?!</h[23]>).)*?</h[23]>)", lambda mm: mm.group(1) + photo_fig(c), sec, count=1, flags=re.S)
         return sec
-    return re.sub(r'<section class="(?:block|sources block)">.*?</section>(?=\s*(?:<section|<div class="block|$|<script))', sec_rep, main, flags=re.S)
+    main = re.sub(r'<section class="(?:block|sources block)">.*?</section>(?=\s*(?:<section|<div class="block|$|<script))', sec_rep, main, flags=re.S)
+    if "^" in photos:  # 見出しを選ばない写真は、最初の節の前に置く
+        k = main.find('<section class="block')
+        fig = f'<div class="block photo-block">{photo_fig(photos["^"])}</div>\n'
+        main = main[:k] + fig + main[k:] if k >= 0 else main + fig
+    return main
