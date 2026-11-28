@@ -6,7 +6,7 @@ import glob, html, os, re, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://xn--v5zv98a.com"
-CSS_VER = "20261128u"
+CSS_VER = "20261129g"
 AD = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061443138303693" crossorigin="anonymous"></script>'
 NAV = [("基地イベント", "/event/"), ("岩国フレンドシップデー", "/event/iwakuni/")]
 SECTION_NAME = {"event": ("基地イベント", "/event/")}
@@ -52,7 +52,7 @@ def carded_links():
     # トップの一覧で写真カードになる面（写真の節と同じ写真が2回出ないように外す）
     f = os.path.join(ROOT, "tools", "content", "index.html")
     t = open(f, encoding="utf-8").read() if os.path.exists(f) else ""
-    return {u for m in re.findall(r"<ul>(?:\s*<li><a href=\"/(?:(?!</li>).)*</li>){3,}\s*</ul>", t, re.S) for u in re.findall(r'<li><a href="([^"]+)"', m)}
+    return {u for m in re.findall(r"<ul>(?:\s*<li><a href=\"/(?:(?!</li>).)*</li>){2,}\s*</ul>", t, re.S) for u in re.findall(r'<li><a href="([^"]+)"', m)}
 
 def load_photos():
     photos = {}
@@ -279,16 +279,14 @@ def link_ships(url, body):
         return m.group(0)
     return re.sub(r"<td>([ぁ-ん]+)</td>", rep, body)
 
+HERO_ALT = "米軍基地の一般開放の日の飛行場で、地面から顔を出す2匹の3Dちんあなご（黄色と白のしまの1匹と、白に茶色の斑点の1匹）。後ろに輸送機と戦闘機、管制塔、空には白いけむりを引いて飛ぶ2機のジェット機"
 def top_hero(body):
-    global PHOTOS
-    if PHOTOS is None: PHOTOS = load_photos(); dedupe_photos()
-    ph = PHOTOS.get("/event/iwakuni/") or next((PHOTOS[u] for u in sorted(PHOTOS)), None)
-    bg = f' style="background-image:linear-gradient(180deg,rgba(10,20,40,.55),rgba(10,20,40,.88)),url({esc(ph[1])})"' if ph else ""
-    credit = (f'<p class="credit">写真：{esc(ph[6])} {esc(ph[3])} / <a href="{esc(ph[5])}" rel="noopener license" target="_blank">{esc(ph[4])}</a>'
-              f'（<a href="{esc(ph[2])}" rel="noopener" target="_blank">Wikimedia Commons</a>）</p>') if ph else ""
-    return (f'<section class="tophero"{bg}><div class="inner"><p class="kicker">在日米軍基地のイベントと米軍の公式情報</p>'
+    # 2026-11-29 運営者「トップページ ヒーロー画像 ３Ｄちんあなご を追加」（Higgsfield・基準の絵を参照・元の絵は E:/claudecode/chinanago-dist/hero-20261129/）
+    return (f'<section class="tophero t3d"><img class="top-img" src="/assets/hero-1344.webp" srcset="/assets/hero-720.webp 720w, /assets/hero-1344.webp 1344w" '
+            f'sizes="(max-width: 980px) 100vw, 944px" width="1344" height="752" alt="{esc(HERO_ALT)}" fetchpriority="high" decoding="async">'
+            f'<div class="inner"><p class="kicker">在日米軍基地のイベントと米軍の公式情報</p>'
             f'<h1>米軍基地の一般開放、<br>次はいつ・どこで？</h1><p class="lead">岩国フレンドシップデー、横田の日米友好祭、三沢基地航空祭など、在日米軍基地のイベントを公式発表からまとめています。</p>'
-            f'<div class="cta"><a class="btn" href="/event/">基地イベント一覧</a><a class="btn ghost" href="/event/iwakuni/">岩国フレンドシップデー</a></div></div>{credit}</section>\n')
+            f'<div class="cta"><a class="btn" href="/event/">基地イベント一覧</a><a class="btn ghost" href="/event/iwakuni/">岩国フレンドシップデー</a></div></div></section>\n')
 
 SHIP_JA = {"CVN 68": "ニミッツ", "CVN 69": "ドワイト・D・アイゼンハワー", "CVN 70": "カール・ヴィンソン", "CVN 71": "セオドア・ルーズベルト",
            "CVN 72": "エイブラハム・リンカーン", "CVN 73": "ジョージ・ワシントン", "CVN 74": "ジョン・C・ステニス", "CVN 75": "ハリー・S・トルーマン",
@@ -398,7 +396,7 @@ def ul_to_cards(main):
     SEEN_THUMBS.clear(); USED_SRC.clear()
     def rep(m):
         items = re.findall(r'<li><a href="([^"]+)">(.*?)</a>(?:：|・)?(.*?)</li>', m.group(0), re.S)
-        if not items or len(items) < 3 or any(not u.startswith("/") for u, _, _ in items): return m.group(0)
+        if not items or len(items) < 2 or any(not u.startswith("/") for u, _, _ in items): return m.group(0)
         def th(u):
             if not u.startswith("/"): return ""
             ph = photo_for(u)
@@ -464,7 +462,8 @@ def render(url, title, desc, body):
     if url == "/calendar/":
         body = link_garrisons(archive_rows(body))
     body = ul_to_cards(body)
-    main = (f'  <div class="crumb">{crumb}</div>\n' if url != "/" else "") + hero + insert_after_first_section(blockify(wrap_tables(body)), figure_for(url))
+    from design import decorate
+    main = (f'  <div class="crumb">{crumb}</div>\n' if url != "/" else "") + hero + decorate(url, insert_after_first_section(blockify(wrap_tables(body)), figure_for(url)))
     if gal:
         j = main.find('<section class="sources block">')
         main = main[:j] + gal + main[j:] if j >= 0 else main + gal

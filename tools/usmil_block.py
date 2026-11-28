@@ -2,6 +2,7 @@
 data/usmil_notam.json（tools/notam_usmil.py が notam.tokyo の取り込み結果から作る）を、まとまりごとのカードにする。
 地図は notam.tokyo と同じ「地理院タイル（淡色地図）に赤い丸」。赤い丸は NOTAM の Q項の中心と半径（実際の区域はその中の多角形）。"""
 import html, json, math, os, re, datetime
+from design import ic
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -120,7 +121,7 @@ def usmil_block():
           "var rs=c.querySelectorAll('tr[data-from]'),live=0,on=0;rs.forEach(function(r){var t=r.dataset.to?Date.parse(r.dataset.to):1/0;"
           "if(t<n){r.hidden=true}else{live++;if(Date.parse(r.dataset.from)<=n)on=1}});if(!live){c.hidden=true}else{v++;if(on)c.querySelector('.um-now').hidden=false}});"
           "if(!v)s.querySelector('.um-none').hidden=false})();</script>")
-    return (f'<section class="block usmil" id="usmil"><h2>米軍の演習・訓練（NOTAM）</h2>'
+    return (f'<section class="block usmil" id="usmil"><h2>{ic("plane")}米軍の演習・訓練（NOTAM）</h2>'
             f'<p class="lead">国の航空情報 NOTAM（ノータム）のうち、米軍の活動と書かれたものと、米軍の基地や訓練区域の空域のものを、地図と日本時間でまとめています'
             f'（{esc(got)}取得・{len(items)}件）。</p>'
             f'{none}<div class="um-grid">{"".join(cards)}</div>'
