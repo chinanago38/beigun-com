@@ -125,7 +125,7 @@ def tables(sec, h2):
             return w.replace('<div class="table-wrap">', '<div class="table-wrap wide">', 1)
         return w
     sec = re.sub(r'<div class="table-wrap">(<table\b.*?</table>)</div>', rep, sec, flags=re.S)
-    sec = re.sub(r"<td>(現時点で不明|公式の発表は見当たらない)</td>", r'<td><span class="unk">\1</span></td>', sec)
+    sec = re.sub(r"<td>(現時点で明らかになっていない|公式の発表は見当たらない)</td>", r'<td><span class="unk">\1</span></td>', sec)
     return sec
 
 

@@ -96,7 +96,7 @@ def usmil_block():
         lo = min((r["lower"] for r in rs), key=alt_val); hi = max((r["upper"] for r in rs), key=alt_val)
         places = sorted({r["place"] for r in rs})
         place = places[0] if len(places) == 1 else f"{cluster}の{len(circles)}か所の区域（表を開くと1つずつ見られます）"
-        tag = "米軍と明記" if kind == "usmil" else "使う部隊の記載なし"
+        tag = "米軍と明記" if kind == "usmil" else "部隊名の書かれていない NOTAM"
         rows = "".join(
             f'<tr data-from="{esc(r["start_utc"])}" data-to="{esc(r["end_utc"] or "")}"><td>{esc(r["start_jst"])}〜<br>{esc(r["end_jst"])}{"（見込み）" if r["end_est"] else ""}</td>'
             f'<td>{esc(r["sched_jst"] or ("D項（UTC）" + r["sched_utc"] if r["sched_utc"] else "期間中ずっと"))}</td>'
@@ -125,6 +125,6 @@ def usmil_block():
             f'<p class="lead">国の航空情報 NOTAM（ノータム）のうち、米軍の活動と書かれたものと、米軍の基地や訓練区域の空域のものを、地図と日本時間でまとめています'
             f'（{esc(got)}取得・{len(items)}件）。</p>'
             f'{none}<div class="um-grid">{"".join(cards)}</div>'
-            f'<p class="note">NOTAM は操縦する人向けの空域の知らせで、訓練の中身や部隊名までは書かれていないことがあります（「使う部隊の記載なし」は、岩国の臨時留保空域・W で始まる警戒区域・米軍の飛行場の NOTAM で、部隊名が書かれていないもの）。'
+            f'<p class="note">NOTAM は操縦する人向けの空域の知らせで、訓練の中身や部隊名までは書かれていないことがあります（「部隊名の書かれていない NOTAM」は、岩国の臨時留保空域・W で始まる警戒区域・米軍の飛行場の NOTAM で、部隊名が書かれていないもの）。'
             f'地図の赤い丸は NOTAM の Q項の中心と半径で、実際の区域はその中の多角形などです。押すと Google マップが開きます。'
             f'航空機の運航には使えません。米軍の NOTAM の一覧と原文は <a href="https://notam.tokyo/us-military/" target="_blank" rel="noopener">notam.tokyo の米軍の演習・訓練のページ</a>で見られます。</p>{js}</section>\n')
