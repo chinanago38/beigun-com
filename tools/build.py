@@ -6,7 +6,7 @@ import glob, html, os, re, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://xn--v5zv98a.com"
-CSS_VER = "20261127i"
+CSS_VER = "20261128u"
 AD = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061443138303693" crossorigin="anonymous"></script>'
 NAV = [("基地イベント", "/event/"), ("岩国フレンドシップデー", "/event/iwakuni/")]
 SECTION_NAME = {"event": ("基地イベント", "/event/")}
@@ -459,7 +459,8 @@ def render(url, title, desc, body):
         crumbs.append((strip(m.group(1)) if m else title, None))
     crumb = " › ".join(f'<a href="{u}">{esc(t)}</a>' if u else esc(t) for t, u in crumbs)
     if url == "/":
-        hero = top_hero(body) + photo_wall()
+        from usmil_block import usmil_block
+        hero = top_hero(body) + usmil_block() + photo_wall()
     if url == "/calendar/":
         body = link_garrisons(archive_rows(body))
     body = ul_to_cards(body)

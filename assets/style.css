@@ -229,3 +229,40 @@ ol.steps li::before{content:counter(st);position:absolute;left:12px;top:10px;wid
 .faq details{border:1px solid #d8e4f0;border-radius:12px;padding:10px 14px;margin:0 0 10px;background:#fff}
 .faq summary{font-weight:700;cursor:pointer}
 .faq details p{margin:8px 0 0}
+/* 米軍の演習・訓練（NOTAM）2026-11-28 */
+.usmil .um-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:12px 0}
+@media(min-width:760px){.usmil .um-grid{grid-template-columns:1fr 1fr}}
+.um-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.um-card[hidden]{display:none}
+.um-map{position:relative;display:block;aspect-ratio:360/210;overflow:hidden;background:#cfe3ee}
+.um-map .um-tiles img{position:absolute;max-width:none;height:auto}
+.um-map svg{position:absolute;inset:0;width:100%;height:100%}
+.um-map small{position:absolute;right:6px;bottom:4px;font-size:.68rem;color:#455;background:rgba(255,255,255,.8);padding:0 5px;border-radius:4px}
+.um-body{padding:12px 16px 14px}
+.um-body h3{margin:4px 0 8px;font-size:1.08rem;line-height:1.45}
+.um-top{margin:0;display:flex;gap:6px;flex-wrap:wrap}
+.um-tag,.um-now{font-size:.75rem;font-weight:700;border-radius:999px;padding:2px 10px}
+.um-tag{background:#fde8eb;color:#a3283a}
+.um-base .um-tag{background:#eef1f4;color:#44515b}
+.um-now{background:#d1495b;color:#fff}
+.um-now[hidden]{display:none}
+.um-kv{margin:0 0 10px}
+.um-kv>div{display:grid;grid-template-columns:5.2em 1fr;gap:8px;padding:6px 0;border-top:1px solid #edf1f4}
+.um-kv dt{font-weight:700;color:var(--sub);font-size:.88rem}
+.um-kv dd{margin:0;font-size:.95rem;line-height:1.6}
+.um-kv dd small{color:var(--sub)}
+.um-chips{display:flex;flex-wrap:wrap;gap:4px}
+.um-chip{font-size:.75rem;background:#f1f6fc;border:1px solid #d8e4f0;border-radius:6px;padding:0 6px;font-family:ui-monospace,monospace}
+.um-card details{border:1px solid #d8e4f0;border-radius:10px;padding:6px 10px;margin:0 0 10px;background:#fafcfe}
+.um-card summary{cursor:pointer;font-weight:700;font-size:.9rem}
+.um-card table{font-size:.82rem}
+.um-card td small{color:var(--sub)}
+.um-card tr[hidden]{display:none}
+.um-link{margin:0}
+.um-link .btn{display:block;text-align:center}
+.um-none{background:#f4f7f9;border-radius:10px;padding:10px 14px;font-size:.9rem;color:var(--sub)}
+.um-none[hidden]{display:none}
+.um-kv dt,.um-kv dd{padding-left:0;margin-top:0}
+.um-kv dt::before,.um-kv dd::before,.um-body h3::before{content:none;display:none}
+.um-card table{min-width:640px}
+.um-card th{white-space:nowrap}
