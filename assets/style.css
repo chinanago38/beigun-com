@@ -338,3 +338,8 @@ ul.dots li::before{content:"";position:absolute;left:4px;top:17px;width:9px;heig
 .photo-block{padding:10px}
 .photo-block .photo.inpage{margin:0;border:none}
 .photo.inpage img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.photo-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:4px 0 16px}
+.photo-row .photo.inpage{margin:0}
+.photo-row .photo.inpage img{aspect-ratio:4/3}
+.gallery.g-inpage figure.photo{margin:0}
+.gallery.g-inpage img{aspect-ratio:4/3}

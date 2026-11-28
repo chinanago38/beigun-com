@@ -6,7 +6,7 @@ import glob, html, os, re, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://xn--v5zv98a.com"
-CSS_VER = "20261129h"
+CSS_VER = "20261129i"
 AD = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061443138303693" crossorigin="anonymous"></script>'
 NAV = [("基地イベント", "/event/"), ("岩国フレンドシップデー", "/event/iwakuni/")]
 SECTION_NAME = {"event": ("基地イベント", "/event/")}
@@ -70,8 +70,8 @@ def load_photos():
             a = "作者不明"
         c[3] = a
         photos[c[0].strip()] = c
-    for u, rs in picked_rows().items():
-        if u not in photos: photos[u] = [u] + rs[0][1:7]
+    for u, rs in picked_rows().items():  # 選んだ写真（picked.tsv）を自動の取り込みより先にする（2026-11-29 主題の写っている写真に替える）
+        photos[u] = [u] + rs[0][1:7]
     return photos
 
 PHOTOS = None
@@ -407,6 +407,7 @@ def archive_rows(body):
     return body[:k] + js + body[k:] if k >= 0 else body + js
 
 SEEN_THUMBS = {}
+CUR_URL = [""]
 USED_SRC = set()
 def ul_to_cards(main):
     SEEN_THUMBS.clear(); USED_SRC.clear()
@@ -414,7 +415,7 @@ def ul_to_cards(main):
         items = re.findall(r'<li><a href="([^"]+)">(.*?)</a>(?:：|・)?(.*?)</li>', m.group(0), re.S)
         if not items or len(items) < 2 or any(not u.startswith("/") for u, _, _ in items): return m.group(0)
         def th(u):
-            if not u.startswith("/"): return ""
+            if not u.startswith("/") or CUR_URL[0] == "/": return ""  # トップのカードには下の面の写真を出さない（1サイトで同じ写真は1回）
             ph = photo_for(u)
             k = SEEN_THUMBS.get(u, 0); SEEN_THUMBS[u] = k + 1
             src, alt = (ph[1], ph[6]) if ph else (None, "")
@@ -447,6 +448,7 @@ def unlink_missing(body):
     return re.sub(r'<a href="/(event)/([a-z0-9]+)/"[^>]*>(.*?)</a>', rep, body)
 
 def render(url, title, desc, body):
+    CUR_URL[0] = url
     body = unlink_missing(link_ships(url, body))
     m = re.search(r"<h1>(.*?)</h1>\s*(<p class=\"updated\">.*?</p>)?", body, re.S)
     hero = ""

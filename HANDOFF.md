@@ -1,4 +1,5 @@
 # HANDOFF
+- 2026-11-29 画像を「その面の主題が写っているか」で1枚ずつ見直し：岩国の面はフレンドシップデー2026の米海兵隊の公有の写真8枚（ヒーロー・本文4・ギャラリー3）、横田・三沢は友好祭2026・航空祭2026の写真、トップはヒーロー＋6枚（下の面と重ならない）。規約の5面の基地の写真と、岩国の古いギャラリー（場所・行事の確かめられない写真）は外した。表は tools/photos/inline.tsv（見出し・gal）と picked.tsv。次：規約の5面は画像なし（主題の写真が無い）→ 3Dちんあなごにするかはハブの判断待ち。
 - 2026-11-29 メニューからつながる9面すべてに写真（規約の5面に米軍の公有の写真を1枚ずつ・tools/photos/inline.tsv の「^」で最初の節の前）。写真は tools/photos_local.py で webp（幅1200px以下）にして assets/photos/ に置き、build.py が置き換える（20枚・直リンク0）。ギャラリーは人が主役の写真を外し tools/photos/gallery_ok.tsv の10枚だけ（/event/ のギャラリーは無くなった）。次：写真を足したら photos_local.py を回してから build。
 - 2026-11-29 トップのヒーローを 3Dちんあなご（Higgsfield gpt_image_2_5 low 1k・0.25・基準の絵を参照・assets/hero-720/1344.webp・元は E:/claudecode/chinanago-dist/hero-20261129/）にし、全9面を組み替え（tools/design.py：見出しのアイコン・カード・事実の箱・注意の箱・時系列・横に動く表、本文の文は機械で照らして消え0）。写真は横田・三沢・ニュースに Commons の3枚（tools/photos/inline.tsv）と /event/ の1枚（picked.tsv）。次：gh-photos.js は inline.tsv を見ないので、写真を足すときは重なりに注意。
 - 2026-11-28 米軍の演習の節のリンク先を notam.tokyo/us-military/ に（notam.tokyo の席が usmil.json と専用の面を作った・手元の site/data/usmil.json の url を使う）。次：毎時の相乗り（usmil_refresh.py）はハブの判断待ち。

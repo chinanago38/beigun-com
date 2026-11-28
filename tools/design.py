@@ -151,7 +151,7 @@ def inline_photos(url):
     if not os.path.exists(f): return out
     for l in open(f, encoding="utf-8").read().splitlines()[1:]:
         c = l.split("\t")
-        if len(c) >= 8 and c[0] == url: out[c[1]] = c
+        if len(c) >= 8 and c[0] == url: out.setdefault(c[1], []).append(c)
     return out
 
 
@@ -176,12 +176,19 @@ def decorate(url, main):
             sec = sec.replace('<section class="block">', '<section class="block warn">', 1)
         sec = tables(lists(sec, h2), h2)
         sec = subs(sec)
-        for key, c in photos.items():  # 見出し（h2・h3）の直後に写真
-            sec = re.sub(r"(<h[23]>(?:(?!</h[23]>).)*?" + re.escape(key) + r"(?:(?!</h[23]>).)*?</h[23]>)", lambda mm: mm.group(1) + photo_fig(c), sec, count=1, flags=re.S)
+        for key, cs in photos.items():  # 見出し（h2・h3）の直後に写真（2枚以上は横に並べる）
+            if key in ("gal", "^") or "sources" in sec[:40]: continue
+            figs = photo_fig(cs[0]) if len(cs) == 1 else '<div class="photo-row">' + "".join(photo_fig(c) for c in cs) + "</div>"
+            sec = re.sub(r"(<h[23]>(?:(?!</h[23]>).)*?" + re.escape(key) + r"(?:(?!</h[23]>).)*?</h[23]>)", lambda mm: mm.group(1) + figs, sec, count=1, flags=re.S)
         return sec
     main = re.sub(r'<section class="(?:block|sources block)">.*?</section>(?=\s*(?:<section|<div class="block|$|<script))', sec_rep, main, flags=re.S)
     if "^" in photos:  # 見出しを選ばない写真は、最初の節の前に置く
         k = main.find('<section class="block')
-        fig = f'<div class="block photo-block">{photo_fig(photos["^"])}</div>\n'
+        fig = f'<div class="block photo-block">{photo_fig(photos["^"][0])}</div>\n'
         main = main[:k] + fig + main[k:] if k >= 0 else main + fig
+    if "gal" in photos:  # 写真ギャラリー（出典の節の前）
+        g = (f'<section class="block"><h2>{ic("camera")}写真ギャラリー</h2><div class="gallery g-inpage">'
+             + "".join(photo_fig(c) for c in photos["gal"]) + "</div></section>\n")
+        k = main.find('<section class="sources block">')
+        main = main[:k] + g + main[k:] if k >= 0 else main + g
     return main
